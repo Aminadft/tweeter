@@ -1,0 +1,36 @@
+section.new-tweet {
+  padding-bottom: 50px;
+}
+
+label.tweetHeader {
+  font-weight: bold;
+}
+
+textarea#tweet-text {
+  resize: none;
+  outline: none;
+  border-width: 0 0 4px;
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+}
+
+div.submit-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bungee', cursive;
+}
+
+button.tweet-btn {
+  color: white;
+  background-color: #4056A1;
+  border: none;
+}
+
+button.tweet-btn:hover {
+  color: white;
+  background-color: #2b47a3;
+  border: none;
+}
