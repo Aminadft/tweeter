@@ -35,19 +35,37 @@ integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7g
       <span class="logo">tweeter</span>
       <div class="newTweet" >
         <span><strong>Write</strong> a new tweet</span>
+        <!-------arrow addition------>
+
         <div class=down-arrow></div>
         <i class="fa-solid fa-angles-down"></i>
-
+        <!-------image and name  addition-->
       </div>
     </nav>
-  
+    <header class="headerClass">
+      <div>
+          <img src="./images/profile-hex.png"> 
+      </div>
+      <div>
+        <h2><strong>Amina</strong> Malik</h2>
         </div>
         
   </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-     
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+        </section>
+      <section id="tweets-container">
       </section>
     </main>
   </body>
