@@ -7,13 +7,22 @@ label.tweetHeader {
 }
 
 textarea#tweet-text {
-  resize: none;
+  display: flex;
+  font-family:Source Sans Pro , sans-serif;
   outline: none;
   border-width: 0 0 4px;
-  background-color: transparent;
+  background-color: beige;
   width: 100%;
   height: 40px;
   font-size: 20px;
+}
+
+div.errorMessage {
+font: 20px bold;
+margin-bottom: 2px;
+color:firebrick;
+visibility: hidden;
+
 }
 
 div.submit-section {
