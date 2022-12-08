@@ -37,16 +37,38 @@ background-color: #f4f1ec;
   margin-right: 5%;
   flex-direction: column;
   align-items: center;
-  color: #545149;
+  color: #20201e;
 background-color: #f4f1ec;
 }
 .logo {    
   font-family: "Bungee", sans-serif;
+}
+ /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
+  @media only screen and (min-width: 768px) {
+
+  nav {
+    background-color:  #5f6d9a; 
   
+  }
+  body {
+    display: flex;
+    flex-direction: row;
+  }
 
+  header.main {
+    flex: 1;
+    margin-top: 150px;
+    margin-left: 50px;
+  }
+  
+  main.container {
+    flex: 2;
+    margin-top: 150px;
+    padding: 50px;
+  
+  }
+}
 
-
-} 
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
