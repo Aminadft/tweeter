@@ -6,7 +6,7 @@ nav {
   display:flex;
   padding: 1.5em;
   justify-content: space-between;
-  /* align-items: center; */
+  
   
 }
 
@@ -19,6 +19,12 @@ nav {
 }
 .right-nav {
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.newTweet{
   display: flex;
   flex-direction: column;
   align-items: center;

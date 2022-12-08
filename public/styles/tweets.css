@@ -10,7 +10,7 @@ article.tweets:hover {
   border: 2px solid #5b5548;
   padding: 1em;
   margin-bottom: 1em;
-  box-shadow: 3px 3px #423636;
+  box-shadow: 3px 3px hwb(0 21% 74%);
 }
 header.tweetHeader {
   display: flex;
@@ -28,14 +28,15 @@ img.avatar {
 }
 
 
-tweet.tweet-user-name 
+tweet.tweet-user-name {
 flex-grow: 2;
-  padding: 0 1em; {
-  color:#7c7878;
+  padding: 0 1em; 
+   color: firebrick;
+
 }
 
 output.counter {
-  color:#545149;
+  color:#1d1c1b;
 }
 
 output.counterRed {
@@ -62,5 +63,5 @@ i.icons {
 }
 
 i.icons:hover {
-  color: #6cd8b6;
+  color: #32b58b;
 }
