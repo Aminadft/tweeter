@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- App CSS/nav/header/new tweet/tweets -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/tweets.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <!----Disable viewport zooming --->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- App CSS/nav/header/new tweet/tweets -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/tweets.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
-integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>"
-<!-- App Timeago -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>"
+  <!-- App Timeago -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
 
-     <!-- App composer-char-counter -->
-     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <!-- App composer-char-counter -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="logo">tweeter</span>
-      <div class="newTweet" >
-        <span><strong>Write</strong> a new tweet</span>
-        <!-------arrow addition------>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span class="logo">tweeter</span>
+    <div class="newTweet">
+      <span><strong>Write</strong> a new tweet</span>
+      <!-------animated arrow addition------>
 
-        <div class=down-arrow></div>
-        <i class="fa-solid fa-angles-down"></i>
-        <!-------image and name  addition-->
-      </div>
-    </nav>
-    <header class="headerClass">
-      <div>
-          <img src="./images/profile-hex.png"> 
-      </div>
-      <div>
-        <h2><strong>Amina</strong> Malik</h2>
-        </div>
-        
+      <i id="down-arrow" class="fa-solid fa-angles-down"></i>
+      <!-------image and name  addition-->
+
+  </nav>
+  <header class="headerClass">
+    <div>
+      <img src="./images/profile-hex.png">
+    </div>
+    <div>
+      <h2><strong>Amina</strong> Malik</h2>
+    </div>
+
   </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form>
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <form action="/tweets" class="tweetForm" method="POST">
+        <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
+        <div class="errorMessage"><i class="fa-solid fa-triangle-exclamation"></i> Tweet can not be left empty or have
+          more than 140 characters!</div>
+        <div class="submit-section"></div>
+        <span class="button-row">
+          <button class="button-tweet" type="submit">Tweet</button>
+          <span counter>
             <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-        </section>
-      <section id="tweets-container">
-      </section>
-    </main>
-  </body>
+          </span>
+        </span>
+      </form>
+    </section>
+    <section id="tweets-container"> </section>
+  </main>
+</body>
+
 </html>
