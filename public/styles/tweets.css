@@ -6,13 +6,13 @@
   margin-bottom: 1em;
 }
 
-article.tweets:hover {
+article:hover {
   border: 2px solid #5b5548;
   padding: 1em;
   margin-bottom: 1em;
   box-shadow: 3px 3px hwb(0 21% 74%);
 }
-header.tweetHeader {
+.tweetHeader {
   display: flex;
   justify-content: space-between;
 }
@@ -28,12 +28,32 @@ img.avatar {
 }
 
 
-tweet.tweet-user-name {
+.tweet-user-name {
 flex-grow: 2;
   padding: 0 1em; 
    color: firebrick;
 
 }
+
+
+.button-row {
+display: flex;
+justify-content: space-between;
+
+
+
+}
+
+.button-tweet {
+
+color:rgb(242, 242, 246);
+background-color: #173db9;
+
+
+
+}
+
+
 
 output.counter {
   color:#1d1c1b;
@@ -43,7 +63,7 @@ output.counterRed {
   color:#f4190d;
 }
 
-footer.tweetFooter {
+footer {
   padding-left: 1em;
   padding-right: 1em;
   height: 20px;
@@ -55,7 +75,7 @@ footer.tweetFooter {
 hr {
   height: 1em;
   width: auto;
-  background-color: #888888;
+  background-color: #af9595;
 }
 
 i.icons {
