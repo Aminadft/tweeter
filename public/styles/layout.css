@@ -17,9 +17,9 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -30,6 +30,11 @@ align-items: center;
 color: #545149;
 background-color: #f4f1ec;
 }
+.tweet-page{
+  display: flex;
+  flex-direction: row;
+}
+
 .container {
   display: flex;
   width: 90%;
@@ -43,33 +48,4 @@ background-color: #f4f1ec;
 .logo {    
   font-family: "Bungee", sans-serif;
 }
- /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
-  @media only screen and (min-width: 768px) {
 
-  nav {
-    background-color:  #5f6d9a; 
-  
-  }
-  body {
-    display: flex;
-    flex-direction: row;
-  }
-
-  header.main {
-    flex: 1;
-    margin-top: 150px;
-    margin-left: 50px;
-  }
-  
-  main.container {
-    flex: 2;
-    margin-top: 150px;
-    padding: 50px;
-  
-  }
-}
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
