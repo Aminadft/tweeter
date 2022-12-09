@@ -30,16 +30,15 @@ const name = tweetObj.user.name;
   </header>
   <p>${escape(text)}</p>
   <footer>
-    <hr>
     <div>
-      <i>${date}</i>
+      <span>${date}</span>
+      </div>
       <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
         <i class="fa-solid fa-heart"></i>
         <i class="likes">1</i>
       </div>
-    </div>
   </footer>
 </article>`;
   return $tweet;
@@ -53,7 +52,7 @@ const renderTweets = function(tweets) {
 $("#tweets-container").html('')
 for (const tweet of tweets) {
   const $tweet = createTweetElement(tweet);
-  $("#tweets-container").append($tweet)
+  $("#tweets-container").prepend($tweet)
 }
 }
 
@@ -128,40 +127,62 @@ $(`.newTweet`).click(function(event) { // should be in a function
 
   $(`.tweetForm`).submit(function(event) {
 
-    $('#tweet-error').hide();
+    // $('#tweet-error').hide();
     //prevents page from reloading
     event.preventDefault();
-    
+    $('#errorMessage').slideUp(400).empty();
+    const text = $("#tweet-text").val();
+    const data = $(this).serialize();
 
-    // error if tweet length is invalid, does not send ajax POST request
-    if (!$('#tweet-text').val()) {
-      $('#error-msg-null').slideDown("slow", () => {});
-      return setTimeout(() => $('.errors').slideUp(), 5000);
+    // Check if tweet text is empty or longer than 140 characters
+    if (!text) {
+      $('#errorMessage').empty();
+      const $errorMessage = "⚠ Please type something before hitting tweet button!";
+      $('#errorMessage').text($errorMessage).slideDown();
+      return;
+    } else if (text.length > 140) {
+      $('#errorMessage').empty();
+      const $errorMessage = "⚠ Yikes you have a lot to say, you can only enter 140 characters!";
+      $('#errorMessage').text($errorMessage).slideDown();
+      return;
     }
+
+    // // error if tweet length is invalid, does not send ajax POST request
+    // if (!$('#tweet-text').val()) {
+    //   $('#errorMessage').text("⚠ Please enter something before pressing the button and or not exceed 140 characters! ⚠").slideDown()
+    
+    // }
   
-    if ($('#tweet-text').val().length > 140) {
-      $('#error-msg-length').slideDown("slow", () => {});
-      return setTimeout(() => $('.errors').slideUp(), 5000);
-    }
-  
-  // get new tweet data from text area and serialize it
+    // if ($('#tweet-text').val().length > 140) {
+    //   $('#error-msg-length').slideDown("slow", () => {});
+    //   return setTimeout(() => $('.errors').slideUp(), 5000);
+    // }
+    // get new tweet data from text area and serialize it
     const result = $('.tweetForm').serialize();
     $.post('/tweets', result, () => {
       $('#tweet-text').val('');
       $('.counter').text(140);
-  
+      
       loadTweets();
     });
-  
+    
   });
-})
-   
+  
+  
+  // Compose button on navigation bar
+  $('.right-nav').click(function(event) {
+    event.preventDefault();
+    $('#tweet-text').focus();
+  });
 
-
-
-// // new tweet data POST to /tweet route then call loadTweets to show onto page
-// $.ajax({
-//   type: "POST",
+  loadTweets();
+});
+  
+  
+  
+  // // new tweet data POST to /tweet route then call loadTweets to show onto page
+  // $.ajax({
+    //   type: "POST",
 //   url: "/tweets",
 //   data: $tweet,
 //   success: function(data) {
