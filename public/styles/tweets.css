@@ -1,46 +1,75 @@
-#tweets-container {
+/* #tweets-container {
   padding: 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-bottom: 1em;
-}
-
-article:hover {
-  border: 2px solid #5b5548;
+} */
+article {
+  display: flex;
+  flex-direction: column;
+  border: 5px black solid;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   padding: 1em;
-  margin-bottom: 1em;
-  box-shadow: 3px 3px hwb(0 21% 74%);
+  
+  height: auto;
+
+  font-family: Source Sans Pro, Sans-Serif;
+  word-wrap: break-word;
+}
+article:hover {
+  box-shadow: 5px 10px #888888;
+  text-shadow: 0.3px 0.3px rgb(79, 79, 136);
 }
 .tweetHeader {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  background-color: hwb(37 93% 4%);
+  font-family: Bungee, sans-serif;
+  font-size: 0.75em;
+  margin: 3%;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin: 3%;
+  margin-top: 0;
+  font-family: Source Sans Pro, Sans-Serif;
+  font-size: 0.75em;
+  border-top: 5px black solid;
 }
 
 div.tweeterProfile {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: Source Sans Pro, Sans-Serif;
 }
 
 img.avatar {
-  width: 2em;
-  height: 2em;
+  width: 4em;
+  height: 4.5em;
 }
 
 
 .tweet-user-name {
-flex-grow: 2;
-  padding: 0 1em; 
-   color: firebrick;
+  padding: 15px;
+  
 
 }
-
+.tweet-text {
+  padding-inline: 30px;
+  font-size: 0.75em;
+  }
 
 .button-row {
 display: flex;
-justify-content: space-between;
-
-
+justify-content:space-between;
 
 }
 
@@ -52,36 +81,43 @@ background-color: #173db9;
 
 
 }
-
-
-
-output.counter {
-  color:#1d1c1b;
+.image-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  color: #4056A1;
+  padding-inline: 5px;
 }
 
-output.counterRed {
+
+output.currentCounter {
+  color:#1d1c1b;
+  font: bold;
+}
+
+output.currentCounterRed {
   color:#f4190d;
 }
 
-footer {
+/* footer {
   padding-left: 1em;
   padding-right: 1em;
   height: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-hr {
+/* hr {
   height: 1em;
   width: auto;
   background-color: #af9595;
-}
+} */
 
-i.icons {
+/* i.fa-solid {
   color: #2b3e7e;
-}
+} */
 
-i.icons:hover {
-  color: #32b58b;
+i.fa-solid:hover {
+  color: #c93f08;
 }
