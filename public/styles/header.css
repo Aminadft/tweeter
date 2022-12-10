@@ -1,23 +1,51 @@
-header {
-
-  padding-top: 120px;
-  height: 520px;
-  width: 100%;
+.headerClass {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: #b03800;
-  background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-
-}
-img.headImage {
-  border: 4px solid rgb(40, 28, 28);
-}
-
-span.headName {
-  font-size: 35px;
+  padding: 10px 0px;
+  margin-top: 120px;
+  height: 500px;
+  background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
+  background-color: rgb(235, 235, 49);
   color: white;
-  text-shadow: 0 1px 0 #ccc;
+  margin-left: 20px;
+  width: 44%;
+  border: 5pc;
+  border-color: #4056A1;
+  border-radius: 10px
+}
+
+#tweets-container article header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+#tweets-container article footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  display: flex;
+
+  margin: 0px;
+  justify-content: space-between;
+}
+
+/* cellphones and tablets: maximum width of 768px. allows flexibilty in app viewing and structure intact*/
+@media only screen and (max-width: 1024px) {
+  .tweet-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .headerClass {
+    width: 100%;
+  }
+
 
 }
