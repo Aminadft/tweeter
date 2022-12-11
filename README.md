@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-    !["Screenshot description"](https://github.com/Aminadft/tweeter/blob/master/docs/header.png)
+    !["Screenshot of header tweeter"](https://github.com/Aminadft/tweeter/blob/master/docs/header.png?raw=true)
 
 ## Getting Started
 
