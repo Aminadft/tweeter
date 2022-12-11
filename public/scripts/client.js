@@ -127,7 +127,6 @@ $(`.newTweet`).click(function(event) { // should be in a function
 
   $(`.tweetForm`).submit(function(event) {
 
-    // $('#tweet-error').hide();
     //prevents page from reloading
     event.preventDefault();
     $('#errorMessage').slideUp(400).empty();
@@ -147,17 +146,7 @@ $(`.newTweet`).click(function(event) { // should be in a function
       return;
     }
 
-    // // error if tweet length is invalid, does not send ajax POST request
-    // if (!$('#tweet-text').val()) {
-    //   $('#errorMessage').text("⚠ Please enter something before pressing the button and or not exceed 140 characters! ⚠").slideDown()
-    
-    // }
   
-    // if ($('#tweet-text').val().length > 140) {
-    //   $('#error-msg-length').slideDown("slow", () => {});
-    //   return setTimeout(() => $('.errors').slideUp(), 5000);
-    // }
-    // get new tweet data from text area and serialize it
     const result = $('.tweetForm').serialize();
     $.post('/tweets', result, () => {
       $('#tweet-text').val('');
@@ -178,20 +167,4 @@ $(`.newTweet`).click(function(event) { // should be in a function
   loadTweets();
 });
   
-  
-  
-  // // new tweet data POST to /tweet route then call loadTweets to show onto page
-  // $.ajax({
-    //   type: "POST",
-//   url: "/tweets",
-//   data: $tweet,
-//   success: function(data) {
-//     loadTweets();
-//   }
-
-// });
-// // Clear text area after new tweet is posted to page
-// this.reset();
-// // restart counter at 140
-// $('.counter').text(140);
-// });
+ 

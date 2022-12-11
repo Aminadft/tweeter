@@ -47,9 +47,9 @@
 
       <i id="down-arrow" class="fa-solid fa-angles-down"></i>
       <!-------image and name  addition-->
-
+        <!--Header with avatar & name-->
   </nav>
-  <header class="headerClass">
+  <div class="tweet-page"><header class="headerClass">
     <div>
       <img src="./images/profile-hex.png">
     </div>
@@ -62,21 +62,25 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+      <div id="errorMessage"></div>
+
       <form action="/tweets" class="tweetForm" method="POST">
         <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
-        <div class="errorMessage"><i class="fa-solid fa-triangle-exclamation"></i> Tweet can not be left empty or have
-          more than 140 characters!</div>
         <div class="submit-section"></div>
         <span class="button-row">
           <button class="button-tweet" type="submit">Tweet</button>
           <span counter>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="maxCounter" class="maxCounter" for="tweet-text">140</output>
+                <output name="/"> / </output>
+            <output name="currentCounter" class="currentCounter" for="tweet-text"><strong>140</strong></output>
           </span>
         </span>
       </form>
     </section>
     <section id="tweets-container"> </section>
   </main>
+  </div>
+  <!-- show the random tweets -->
 </body>
 
 </html>
