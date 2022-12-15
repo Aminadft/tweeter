@@ -4,6 +4,7 @@ $(document).ready(function() {
 
   
   $("#tweet-text").on("input", function() {
+  
     const maxLength = 140;
     const tweetLength = $(this).val().length;
     const textRemaining = maxLength - tweetLength;

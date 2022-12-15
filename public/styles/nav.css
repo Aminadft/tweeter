@@ -8,6 +8,7 @@ nav {
   display: flex;
   padding: 1.5em;
   justify-content: space-between;
+  position: fixed;
 
 
 }

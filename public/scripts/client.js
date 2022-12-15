@@ -150,7 +150,7 @@ $(`.newTweet`).click(function(event) { // should be in a function
     const result = $('.tweetForm').serialize();
     $.post('/tweets', result, () => {
       $('#tweet-text').val('');
-      $('.counter').text(140);
+      $('.maxCounter').text(140);
       
       loadTweets();
     });
